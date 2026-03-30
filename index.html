@@ -243,6 +243,60 @@
       width: calc(100% - 7rem);
     }
 
+    /* ── Stats strip ─────────────────────────────────────────── */
+    #stats {
+      background: var(--bg2);
+      border-top: 1px solid var(--dim4);
+      border-bottom: 1px solid var(--dim4);
+    }
+
+    .stats-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3.5rem 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .stat-number {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--dim1);
+      line-height: 1.5;
+    }
+
+    .stat-source {
+      font-size: 0.6rem;
+      color: var(--dim3);
+      letter-spacing: 0.06em;
+      margin-top: 0.15rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 2rem;
+      }
+    }
+
     /* ── Services ─────────────────────────────────────────────── */
     #services { background: var(--bg); }
 
@@ -572,6 +626,32 @@
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in touch</a>
       <a href="#services" class="btn btn-ghost">See what I do</a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats">
+    <div class="stats-inner">
+      <div class="stat reveal">
+        <div class="stat-number">80%</div>
+        <div class="stat-label">of manual data work can be automated</div>
+        <div class="stat-source">McKinsey Global Institute</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number">6–8 hrs</div>
+        <div class="stat-label">saved per week on reporting workflows</div>
+        <div class="stat-source">typical automation result</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number">~90%</div>
+        <div class="stat-label">fewer errors in automated data pipelines</div>
+        <div class="stat-source">vs. manual entry</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number">40%</div>
+        <div class="stat-label">productivity gain from AI-assisted workflows</div>
+        <div class="stat-source">MIT & Stanford research</div>
+      </div>
     </div>
   </section>
 
